@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+<title>Square Calculator</title>
+</head>
+<body>
+
+<h2>Calculate Square</h2>
+
+<p>Enter a number:</p>
+<input type="number" id="inputNumber">
+<button onclick="calculateSquare()">Calculate</button><br>
+<h2>calculate a area</h2>
+<p>Enter a number:</p><input type="number" id="radious">
+<button onclick="area()">Area</button>
+<p id="result"></p>
+<h2>smaller value</h2>
+<p>Enter number 1</p>
+<input type="number" id="num1"><br>
+<p>Enter number 2</p>
+<input type="number" id="num2">
+<button onclick="calculatesmall()">Calculate</button>
+<br>
+<br>
+
+<script>
+    function calculateSquare() {
+        // Get the input value
+        var number = document.getElementById("inputNumber").value;
+    
+        // Calculate the square
+        var square = Math.pow(number, 2);
+    
+        // Display the result
+        document.getElementById("result").innerHTML = "The square of " + number + " is " + square;
+        
+
+    }
+    function area(){
+
+        var radious=document.getElementById("radious").value;
+        var area=22/7*radious*radious;
+        document.getElementById("result").innerHTML="area is  "+ area;
+
+    }
+    for (let i = 0; i <= 20; i++) {
+    if (i % 2 === 0) {
+        document.write(i + " is even.<br>");
+    } else {
+        document.write(i + " is odd.<br>");
+    }
+}
+var num1=5;
+var num2=-8;
+var num3=2;
+
+// Calculate the product of the numbers
+var product=num1*num2*num3;
+
+// Check the sign of the product
+if (product > 0) {
+    document.write("The product is positive.");
+} else if (product < 0) {
+    document.write("The product is negative.");
+} else {
+    document.write("The product is zero.");
+}
+var numberToCheck = 15; // You can change this number to any number you want to check
+
+if (numberToCheck % 3 === 0 && numberToCheck % 5 === 0) {
+    document.write("the number is divided");
+} else {
+    document.write("is not a multiple of both 3 and 5.") ;
+}
+function calculatesmall(){
+    var num1=document.getElementById("num1").value;
+    var num2=document.getElementById("num2").value;
+    if (num1 < num2) {
+    document.write("The smaller value is: " + num1);
+} else if (num2 < num1) {
+    document.write("The smaller value is: " + num2);
+} else {
+    document.write("Both values are equal.");
+}
+}
+
+    </script>
+    
+    </body>
+    </html>
